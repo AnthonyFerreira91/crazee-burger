@@ -17,6 +17,14 @@ body {
   margin: 2rem 2rem;
 }
 
+button {
+  padding: 0 10px;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
 p {
-  margin: 20px;
+  margin: 20px 0;
 }
