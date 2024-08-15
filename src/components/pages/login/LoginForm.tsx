@@ -1,29 +1,33 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 export default function LoginForm() {
-   const [firstname, setFirstname] = useState("");
-   const navigate = useNavigate();
+  const [firstname, setFirstname] = useState("");
+  const navigate = useNavigate();
 
-   const handleChange = (event: ChangeEvent<HTMLInputElement>) => setFirstname(event.target.value);
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) =>
+    setFirstname(event.target.value);
 
-   const handleSubmit = (event: FormEvent) => {
-      event.preventDefault();
-      setFirstname("");
-      navigate(`/order/${firstname}`);
-   }
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    setFirstname("");
+    navigate(`/order/${firstname}`);
+  };
 
-   return (
-      <form onSubmit={handleSubmit}>
-         <h2>Connectez-vous</h2>
-         <input 
-            type="text"
-            onChange={handleChange}
-            value={firstname}
-            placeholder="Entrez votre prénom..."
-            required
-         />
-         <button type="submit">Accédez à votre espace</button>
-      </form>
-   )
+  return (
+    <LoginFormStyled onSubmit={handleSubmit}>
+      <h2>Connectez-vous</h2>
+      <input
+        type="text"
+        onChange={handleChange}
+        value={firstname}
+        placeholder="Entrez votre prénom..."
+        required
+      />
+      <button type="submit">Accédez à votre espace</button>
+    </LoginFormStyled>
+  );
 }
+
+const LoginFormStyled = styled.form``;
