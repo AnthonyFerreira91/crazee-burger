@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Input from "../../design-system/Input";
 
 export default function LoginForm() {
   const [firstname, setFirstname] = useState("");
@@ -18,14 +19,14 @@ export default function LoginForm() {
   return (
     <LoginFormStyled onSubmit={handleSubmit}>
       <h2>Connectez-vous</h2>
-      <input
+      <Input
         type="text"
         onChange={handleChange}
         value={firstname}
-        placeholder="Entrez votre prénom..."
+        placeholder="Entrez votre prénom"
         required
       />
-      <button type="submit">Accédez à votre espace</button>
+      <Input type="submit" value="Accéder à mon espace" />
     </LoginFormStyled>
   );
 }
