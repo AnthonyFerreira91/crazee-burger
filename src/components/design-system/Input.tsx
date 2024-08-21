@@ -1,4 +1,5 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
+import { theme } from "../../themes/standardTheme";
 
 type InputProps = {
   type: "text" | "button" | "submit";
@@ -7,6 +8,7 @@ type InputProps = {
   required?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement> | undefined;
   onClick?: MouseEventHandler<HTMLInputElement> | undefined;
+  large?: boolean;
 };
 
 export default function Input({
@@ -16,7 +18,19 @@ export default function Input({
   required,
   onChange = undefined,
   onClick = undefined,
+  large,
 }: InputProps) {
+  const inputStyle = {
+    width: large ? "85%" : "10rem",
+    height: "5.5rem",
+    background: type === "text" ? "white" : theme.colors.primary,
+    color: type === "text" ? "black" : "white",
+    borderRadius: theme.borderRadius.round,
+    border: "none",
+    fontFamily: "Arial",
+    fontWeight: "700",
+  };
+
   return (
     <input
       type={type}
@@ -25,6 +39,7 @@ export default function Input({
       required={required}
       onChange={onChange}
       onClick={onClick}
+      style={inputStyle}
     />
   );
 }

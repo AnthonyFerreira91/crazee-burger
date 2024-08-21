@@ -30,9 +30,9 @@ const LogoStyled = styled.div`
 
   .LoginPage {
     h1 {
-      font-size: 110px;
+      font-size: 11rem;
       font-weight: ${theme.weights.bold};
-      line-height: 115px;
+      line-height: 11.5rem;
     }
 
     img {
