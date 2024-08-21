@@ -24,7 +24,7 @@ const LogoStyled = styled.div`
     justify-content: center;
     gap: 20px;
     align-items: center;
-    color: ${theme.colors.primary_burger};
+    color: ${theme.colors.primary};
     text-transform: uppercase;
   }
 

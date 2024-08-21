@@ -1,10 +1,8 @@
-import { theme } from "../../../themes/standardTheme";
-
 export default function Separate() {
   const hrStyle = {
-    width: "70%",
+    width: "100%",
     borderTop: "none",
-    borderBottom: `1px solid ${theme.colors?.primary}`,
+    borderBottom: `1px solid #F56A2C`,
   };
 
   return <hr style={hrStyle} />;
