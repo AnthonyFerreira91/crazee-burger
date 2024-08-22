@@ -10,7 +10,7 @@ import Separate from "./LoginSeparate";
 // plus d'espace vertical entre le Hr et le h2
 // Hr plus à droite ? (Redimensionnée background ?)
 // Logo légèrement à droite ? (Redimensionnée background ?)
-// Icone sur les inputs
+// Padding en % pour une adaptation tout écran
 
 export default function LoginForm() {
   const [firstname, setFirstname] = useState("");
@@ -37,8 +37,9 @@ export default function LoginForm() {
         placeholder="Entrez votre prénom"
         required
         large
+        icon
       />
-      <Input type="submit" value="Accéder à mon espace" large />
+      <Input type="submit" value="Accéder à mon espace" large icon />
     </LoginFormStyled>
   );
 }

@@ -23,7 +23,7 @@ const LoginPageStyled = styled.div`
   > div {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    padding-top: 14%;
+    padding-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
