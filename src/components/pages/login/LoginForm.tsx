@@ -2,6 +2,8 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Input from "../../design-system/Input";
+import Button from "../../design-system/Button";
+import { RiArrowRightSLine } from "react-icons/ri";
 import Separate from "./LoginSeparate";
 
 export default function LoginForm() {
@@ -23,7 +25,6 @@ export default function LoginForm() {
       <Separate />
       <h2>Connectez-vous</h2>
       <Input
-        type="text"
         onChange={handleChange}
         value={firstname}
         placeholder="Entrez votre prénom"
@@ -31,13 +32,15 @@ export default function LoginForm() {
         large
         icon
       />
-      <Input type="submit" value="Accéder à mon espace" large icon />
+      <Button type="submit" large>
+        Accéder à mon espace
+        <RiArrowRightSLine size="15px" />
+      </Button>
     </LoginFormStyled>
   );
 }
 
 const LoginFormStyled = styled.form`
-  border: 1px solid yellow;
   width: 30.69%;
   padding: 3.9rem 3.2rem;
   display: flex;
