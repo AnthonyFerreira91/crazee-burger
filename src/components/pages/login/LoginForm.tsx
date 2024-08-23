@@ -4,14 +4,6 @@ import styled from "styled-components";
 import Input from "../../design-system/Input";
 import Separate from "./LoginSeparate";
 
-// A faire
-// Mettre un gap de 18px entre les elements h2 et input[button]
-// Hr Plus gros
-// plus d'espace vertical entre le Hr et le h2
-// Hr plus à droite ? (Redimensionnée background ?)
-// Logo légèrement à droite ? (Redimensionnée background ?)
-// Padding en % pour une adaptation tout écran
-
 export default function LoginForm() {
   const [firstname, setFirstname] = useState("");
   const navigate = useNavigate();
@@ -45,13 +37,13 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
   width: 30.69%;
-  padding: 3.2rem;
+  padding: 3.9rem 3.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   color: white;
 
   h1 {
