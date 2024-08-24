@@ -21,21 +21,22 @@ export default function Logo({ variant }: LogoProps) {
 const LogoStyled = styled.div`
   div {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
     color: ${theme.colors.primary};
     text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
 
   .LoginPage {
     h1 {
       font-size: 11rem;
       font-weight: ${theme.weights.bold};
-      line-height: 11.5rem;
+      /* line-height: 1rem; */
     }
 
     img {
+      object-fit: contain;
       width: 200px;
       height: 150px;
     }

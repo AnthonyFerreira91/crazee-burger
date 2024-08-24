@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../../logo/Logo";
+import Logo from "../../reusable-ui/Logo";
 import LoginForm from "./LoginForm";
 
 // Icon "user" a retravaillé
@@ -7,28 +7,21 @@ import LoginForm from "./LoginForm";
 export default function LoginPage() {
   return (
     <LoginPageStyled>
-      <div>
-        <Logo variant="LoginPage" />
-        <LoginForm />
-      </div>
+      <Logo variant="LoginPage" />
+      <LoginForm />
     </LoginPageStyled>
   );
 }
 
 const LoginPageStyled = styled.div`
-  width: 100vw;
   height: 100vh;
-  background: url("/images/burgerBackground.jpg");
-  background-size: 100.5% 101%;
-  font-family: "Amatic SC", sans-serif;
-
-  > div {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    padding-top: 21vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 4px 4px 0px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20vh;
+  background: url("/images/burgerBackground.jpg"), rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  font-family: "Amatic SC", cursive, sans-serif;
 `;

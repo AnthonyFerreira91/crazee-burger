@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import Input from "../../design-system/Input";
+import Input from "../../reusable-ui/Input";
 
 export default function OrderPage() {
   const { firstname } = useParams();

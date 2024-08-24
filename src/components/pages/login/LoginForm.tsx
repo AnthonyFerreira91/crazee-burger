@@ -1,8 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import Input from "../../design-system/Input";
-import Button from "../../design-system/Button";
+import Input from "../../reusable-ui/Input";
+import Button from "../../reusable-ui/Button";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Separate from "./LoginSeparate";
 

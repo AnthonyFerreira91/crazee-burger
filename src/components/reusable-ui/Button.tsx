@@ -20,6 +20,7 @@ export default function Button({
     width: large ? "100%" : "10rem",
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
     gap: "10px",
     padding: "18px 24px",
     background: hover ? "white" : theme.colors.primary_burger,
