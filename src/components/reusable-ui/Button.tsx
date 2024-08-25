@@ -2,14 +2,14 @@ import { MouseEventHandler, ReactNode, useState } from "react";
 import { theme } from "../../themes/standardTheme";
 
 type ButtonProps = {
-  type: "button" | "submit";
   children: ReactNode;
+  type?: "button" | "submit";
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   large?: boolean;
 };
 
 export default function Button({
-  type,
+  type = "button",
   onClick,
   children,
   large,
@@ -17,7 +17,7 @@ export default function Button({
   const [hover, setHover] = useState(false);
 
   const buttonStyle = {
-    width: large ? "100%" : "10rem",
+    width: large ? "100%" : "20rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

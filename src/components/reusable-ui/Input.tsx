@@ -23,7 +23,7 @@ export default function Input({
   icon,
 }: InputProps) {
   const inputStyle = {
-    width: large ? "100%" : "10rem",
+    width: large ? "100%" : "25rem",
     fontSize: theme.fonts.P0,
     borderRadius: theme.borderRadius.round,
     gap: "12.8px",
