@@ -29,17 +29,27 @@ const spacing = {
 } as const;
 
 const fonts = {
-  XXXS: "8px",
-  XXS: "10px",
-  XS: "12px",
-  P0: "15px",
-  P1: "18px",
-  P2: "20px",
-  P3: "24px",
-  P4: "36px",
-  P5: "48px",
-  P6: "60px",
-} as const;
+  size: {
+    XXXS: "8px",
+    XXS: "10px",
+    XS: "12px",
+    P0: "15px",
+    P1: "18px",
+    P2: "20px",
+    P3: "24px",
+    P4: "36px",
+    P5: "48px",
+    P6: "60px",
+  } as const,
+  weights: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+    heavy: 800,
+  } as const,
+};
 
 const gridUnit = 8;
 
@@ -52,19 +62,9 @@ const borderRadius = {
 
 const shadows = {} as const;
 
-const weights = {
-  light: 300,
-  regular: 400,
-  medium: 500,
-  semiBold: 600,
-  bold: 700,
-  heavy: 800,
-} as const;
-
 type Colors = typeof colors;
 type Fonts = typeof fonts;
 type BorderRadius = typeof borderRadius;
-type Weights = typeof weights;
 type Spacing = typeof spacing;
 
 export type ThemeType = {
@@ -73,7 +73,6 @@ export type ThemeType = {
   gridUnit: typeof gridUnit;
   borderRadius: BorderRadius;
   shadows: typeof shadows;
-  weights: Weights;
   spacing: Spacing;
 };
 
@@ -83,6 +82,5 @@ export const theme: ThemeType = {
   gridUnit,
   borderRadius,
   shadows,
-  weights,
   spacing,
 };

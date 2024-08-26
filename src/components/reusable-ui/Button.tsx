@@ -4,7 +4,7 @@ import { theme } from "../../themes/standardTheme";
 type ButtonProps = {
   children: ReactNode;
   type?: "button" | "submit";
-  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   large?: boolean;
 };
 
@@ -23,10 +23,10 @@ export default function Button({
     alignItems: "center",
     gap: "10px",
     padding: "18px 24px",
-    background: hover ? "white" : theme.colors.primary_burger,
+    background: hover ? theme.colors.white : theme.colors.primary_burger,
     color: hover ? theme.colors.primary_burger : theme.colors.white,
-    fontSize: theme.fonts.P0,
-    fontWeight: theme.weights.bold,
+    fontSize: theme.fonts.size.P0,
+    fontWeight: theme.fonts.weights.bold,
     borderRadius: theme.borderRadius.round,
     cursor: "pointer",
   };

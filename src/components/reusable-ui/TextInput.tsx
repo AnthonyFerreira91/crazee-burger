@@ -1,23 +1,23 @@
-import { ChangeEventHandler, ComponentPropsWithoutRef } from "react";
+import { ChangeEventHandler, ComponentProps } from "react";
 import { theme } from "../../themes/standardTheme";
 import styled from "styled-components";
 
 type TextInputProps = {
   value: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onChange: ChangeEventHandler<HTMLInputElement>;
   Icon?: JSX.Element;
-  large?: boolean;
-} & ComponentPropsWithoutRef<"input">;
+  Large?: boolean;
+} & ComponentProps<"input">;
 
 export default function TextInput({
   value,
   onChange,
   Icon,
-  large,
+  Large,
   ...restProps
 }: TextInputProps) {
   return (
-    <TextInputStyled style={{ width: large ? "100%" : "25rem" }}>
+    <TextInputStyled style={{ width: Large ? "100%" : "25rem" }}>
       {Icon && Icon}
       <input type="text" value={value} onChange={onChange} {...restProps} />
     </TextInputStyled>
@@ -33,7 +33,7 @@ const TextInputStyled = styled.div`
   border-radius: ${theme.borderRadius.round};
 
   > input {
-    font-size: ${theme.fonts.P0};
+    font-size: ${theme.fonts.size.P0};
 
     &::placeholder {
       color: #d3d3d3;

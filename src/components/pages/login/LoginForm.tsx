@@ -1,8 +1,8 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../themes/standardTheme";
-import Input from "../../reusable-ui/TextInput";
+import TextInput from "../../reusable-ui/TextInput";
 import Button from "../../reusable-ui/Button";
 import { BsPersonCircle } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -11,9 +11,6 @@ import Separate from "./LoginSeparate";
 export default function LoginForm() {
   const [firstname, setFirstname] = useState("");
   const navigate = useNavigate();
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) =>
-    setFirstname(event.target.value);
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -26,11 +23,11 @@ export default function LoginForm() {
       <h1>Bienvenue chez nous !</h1>
       <Separate />
       <h2>Connectez-vous</h2>
-      <Input
+      <TextInput
         value={firstname}
-        onChange={handleChange}
+        onChange={(event) => setFirstname(event.target.value)}
         Icon={<BsPersonCircle size="15px" color={theme.colors.greyBlue} />}
-        large
+        Large
         placeholder="Entrez votre prénom"
         required
       />
@@ -52,12 +49,12 @@ const LoginFormStyled = styled.form`
   color: ${theme.colors.white};
 
   h1 {
-    font-size: ${theme.fonts.P5};
+    font-size: ${theme.fonts.size.P5};
     line-height: 6.1rem;
   }
 
   h2 {
-    font-size: ${theme.fonts.P4};
+    font-size: ${theme.fonts.size.P4};
     line-height: 46px;
     text-align: center;
   }

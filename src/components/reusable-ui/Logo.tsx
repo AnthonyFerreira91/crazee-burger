@@ -31,7 +31,7 @@ const LogoStyled = styled.div`
   .LoginPage {
     h1 {
       font-size: 11rem;
-      font-weight: ${theme.weights.bold};
+      font-weight: ${theme.fonts.weights.bold};
       /* line-height: 1rem; */
     }
 
