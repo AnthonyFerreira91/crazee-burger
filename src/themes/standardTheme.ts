@@ -16,7 +16,7 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
-};
+} as const;
 
 const spacing = {
   xxs: "4px",
@@ -26,7 +26,7 @@ const spacing = {
   lg: "32px",
   xl: "52px",
   xxl: "84px",
-};
+} as const;
 
 const fonts = {
   XXXS: "8px",
@@ -39,15 +39,19 @@ const fonts = {
   P4: "36px",
   P5: "48px",
   P6: "60px",
-};
+} as const;
+
 const gridUnit = 8;
+
 const borderRadius = {
   subtle: 1,
   round: "5px",
   extraRound: "15px",
   circle: "50%",
-};
-const shadows = {};
+} as const;
+
+const shadows = {} as const;
+
 const weights = {
   light: 300,
   regular: 400,
@@ -55,16 +59,22 @@ const weights = {
   semiBold: 600,
   bold: 700,
   heavy: 800,
-};
+} as const;
+
+type Colors = typeof colors;
+type Fonts = typeof fonts;
+type BorderRadius = typeof borderRadius;
+type Weights = typeof weights;
+type Spacing = typeof spacing;
 
 export type ThemeType = {
-  colors: { [key: string]: string };
-  fonts: { [key: string]: string };
-  gridUnit: number;
-  borderRadius: { [key: string]: number | string };
-  shadows: { [key: string]: string };
-  weights: { [key: string]: number };
-  spacing: { [key: string]: string };
+  colors: Colors;
+  fonts: Fonts;
+  gridUnit: typeof gridUnit;
+  borderRadius: BorderRadius;
+  shadows: typeof shadows;
+  weights: Weights;
+  spacing: Spacing;
 };
 
 export const theme: ThemeType = {

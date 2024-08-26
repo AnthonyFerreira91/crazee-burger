@@ -1,8 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { theme } from "../../../themes/standardTheme";
 import Input from "../../reusable-ui/Input";
 import Button from "../../reusable-ui/Button";
+import { BsPersonCircle } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Separate from "./LoginSeparate";
 
@@ -25,12 +27,12 @@ export default function LoginForm() {
       <Separate />
       <h2>Connectez-vous</h2>
       <Input
-        onChange={handleChange}
         value={firstname}
+        onChange={handleChange}
+        Icon={<BsPersonCircle size="15px" color={theme.colors.greyBlue} />}
+        large
         placeholder="Entrez votre prénom"
         required
-        large
-        icon
       />
       <Button type="submit" large>
         Accéder à mon espace
@@ -47,17 +49,15 @@ const LoginFormStyled = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  color: white;
+  color: ${theme.colors.white};
 
   h1 {
-    font-size: 4.8rem;
-    font-weight: 700;
+    font-size: ${theme.fonts.P5};
     line-height: 6.1rem;
   }
 
   h2 {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: ${theme.fonts.P4};
     line-height: 46px;
     text-align: center;
   }

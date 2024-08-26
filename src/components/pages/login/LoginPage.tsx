@@ -2,8 +2,6 @@ import styled from "styled-components";
 import Logo from "../../reusable-ui/Logo";
 import LoginForm from "./LoginForm";
 
-// Icon "user" a retravaillé
-
 export default function LoginPage() {
   return (
     <LoginPageStyled>
