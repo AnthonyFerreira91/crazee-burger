@@ -2,7 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../themes/standardTheme";
-import Input from "../../reusable-ui/Input";
+import Input from "../../reusable-ui/TextInput";
 import Button from "../../reusable-ui/Button";
 import { BsPersonCircle } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";

@@ -2,30 +2,30 @@ import { ChangeEventHandler, ComponentPropsWithoutRef } from "react";
 import { theme } from "../../themes/standardTheme";
 import styled from "styled-components";
 
-type InputProps = {
+type TextInputProps = {
   value: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   Icon?: JSX.Element;
   large?: boolean;
 } & ComponentPropsWithoutRef<"input">;
 
-export default function Input({
+export default function TextInput({
   value,
   onChange,
   Icon,
   large,
   ...restProps
-}: InputProps) {
+}: TextInputProps) {
   return (
-    <InputStyled style={{ width: large ? "100%" : "25rem" }}>
+    <TextInputStyled style={{ width: large ? "100%" : "25rem" }}>
       {Icon && Icon}
       <input type="text" value={value} onChange={onChange} {...restProps} />
-    </InputStyled>
+    </TextInputStyled>
   );
 }
 
-const InputStyled = styled.div`
-  background: white;
+const TextInputStyled = styled.div`
+  background: ${theme.colors.white};
   display: flex;
   align-items: center;
   gap: 12.8px;

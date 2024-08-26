@@ -24,7 +24,7 @@ export default function Button({
     gap: "10px",
     padding: "18px 24px",
     background: hover ? "white" : theme.colors.primary_burger,
-    color: hover ? theme.colors.primary_burger : "white",
+    color: hover ? theme.colors.primary_burger : theme.colors.white,
     fontSize: theme.fonts.P0,
     fontWeight: theme.weights.bold,
     borderRadius: theme.borderRadius.round,
