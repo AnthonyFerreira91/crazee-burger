@@ -8,37 +8,31 @@ type LogoProps = {
 
 export default function Logo({ variant }: LogoProps) {
   return (
-    <LogoStyled>
-      <div className={variant}>
-        <h1>Crazee</h1>
-        <img src={LogoImage} alt="logo" />
-        <h1>Burger</h1>
-      </div>
+    <LogoStyled className={variant}>
+      <h1>Crazee</h1>
+      <img src={LogoImage} alt="logo" />
+      <h1>Burger</h1>
     </LogoStyled>
   );
 }
 
 const LogoStyled = styled.div`
-  div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: ${theme.colors.primary};
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: ${theme.colors.primary};
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
 
-  .LoginPage {
+  &:not(:not(.LoginPage)) {
     h1 {
       font-size: 11rem;
-      font-weight: ${theme.fonts.weights.bold};
-      /* line-height: 1rem; */
     }
 
     img {
       object-fit: contain;
-      width: 200px;
-      height: 150px;
+      width: 20rem;
+      height: 15rem;
     }
   }
 `;

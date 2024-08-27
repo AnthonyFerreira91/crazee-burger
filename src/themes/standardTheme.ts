@@ -16,32 +16,26 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
-} as const;
-
-const spacing = {
-  xxs: "4px",
-  xs: "8px",
-  sm: "12px",
-  md: "20px",
-  lg: "32px",
-  xl: "52px",
-  xxl: "84px",
+  loginSeparate: "#F56A2C",
+  placeholder: "#d3d3d3",
 } as const;
 
 const fonts = {
   size: {
-    XXXS: "8px",
-    XXS: "10px",
-    XS: "12px",
-    P0: "15px",
-    P1: "18px",
-    P2: "20px",
-    P3: "24px",
-    P4: "36px",
-    P5: "48px",
-    P6: "60px",
+    XXXS: "0.8rem",
+    XXS: "1rem",
+    XS: "1.2rem",
+    P0: "1.5rem",
+    P1: "1.8rem",
+    P2: "2rem",
+    P3: "2.4rem",
+    P4: "3.6rem",
+    P5: "4.8rem",
+    P6: "6rem",
+    p7: "11rem",
   } as const,
-  weights: {
+
+  weight: {
     light: 300,
     regular: 400,
     medium: 500,
@@ -51,16 +45,27 @@ const fonts = {
   } as const,
 };
 
-const gridUnit = 8;
+const spacing = {
+  xxs: "0.4rem",
+  xs: "0.8rem",
+  sm: "1.2rem",
+  md: "2rem",
+  lg: "3.2rem",
+  xl: "5.2rem",
+  xxl: "8.4rem",
+} as const;
 
 const borderRadius = {
   subtle: 1,
-  round: "5px",
-  extraRound: "15px",
+  round: "0.5rem",
+  extraRound: "1.5rem",
   circle: "50%",
 } as const;
 
 const shadows = {} as const;
+
+const gridUnit = 8;
+const sizeIcon = "1.5rem";
 
 type Colors = typeof colors;
 type Fonts = typeof fonts;
@@ -70,17 +75,19 @@ type Spacing = typeof spacing;
 export type ThemeType = {
   colors: Colors;
   fonts: Fonts;
-  gridUnit: typeof gridUnit;
   borderRadius: BorderRadius;
-  shadows: typeof shadows;
   spacing: Spacing;
+  shadows: typeof shadows;
+  gridUnit: typeof gridUnit;
+  sizeIcon: typeof sizeIcon;
 };
 
 export const theme: ThemeType = {
   colors,
   fonts,
-  gridUnit,
+  spacing,
   borderRadius,
   shadows,
-  spacing,
+  gridUnit,
+  sizeIcon,
 };

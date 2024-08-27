@@ -26,14 +26,16 @@ export default function LoginForm() {
       <TextInput
         value={firstname}
         onChange={(event) => setFirstname(event.target.value)}
-        Icon={<BsPersonCircle size="15px" color={theme.colors.greyBlue} />}
+        Icon={
+          <BsPersonCircle size={theme.sizeIcon} color={theme.colors.greyBlue} />
+        }
         Large
         placeholder="Entrez votre prénom"
         required
       />
-      <Button type="submit" large>
+      <Button type="submit" Large>
         Accéder à mon espace
-        <RiArrowRightSLine size="15px" />
+        <RiArrowRightSLine size={theme.sizeIcon} />
       </Button>
     </LoginFormStyled>
   );
@@ -45,7 +47,7 @@ const LoginFormStyled = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 1.8rem;
   color: ${theme.colors.white};
 
   h1 {
@@ -55,7 +57,7 @@ const LoginFormStyled = styled.form`
 
   h2 {
     font-size: ${theme.fonts.size.P4};
-    line-height: 46px;
+    line-height: 4.6rem;
     text-align: center;
   }
 `;

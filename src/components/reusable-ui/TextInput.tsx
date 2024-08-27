@@ -17,7 +17,7 @@ export default function TextInput({
   ...restProps
 }: TextInputProps) {
   return (
-    <TextInputStyled style={{ width: Large ? "100%" : "25rem" }}>
+    <TextInputStyled style={{ width: Large ? "100%" : "" }}>
       {Icon && Icon}
       <input type="text" value={value} onChange={onChange} {...restProps} />
     </TextInputStyled>
@@ -28,16 +28,16 @@ const TextInputStyled = styled.div`
   background: ${theme.colors.white};
   display: flex;
   align-items: center;
-  gap: 12.8px;
-  padding: 18px 24px;
+  gap: 1.28rem;
+  padding: 1.8rem 2.4rem;
   border-radius: ${theme.borderRadius.round};
 
   > input {
     font-size: ${theme.fonts.size.P0};
 
     &::placeholder {
-      color: #d3d3d3;
-      line-height: 17px;
+      color: ${theme.colors.placeholder};
+      line-height: 1.7rem;
     }
   }
 `;

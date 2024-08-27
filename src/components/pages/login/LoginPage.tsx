@@ -15,8 +15,8 @@ const LoginPageStyled = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 20vh;
   background: url("/images/burgerBackground.jpg"), rgba(0, 0, 0, 0.5);
   background-position: center;
   background-size: cover;

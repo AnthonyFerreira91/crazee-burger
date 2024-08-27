@@ -1,49 +1,46 @@
-import { MouseEventHandler, ReactNode, useState } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import { theme } from "../../themes/standardTheme";
+import styled from "styled-components";
 
 type ButtonProps = {
   children: ReactNode;
   type?: "button" | "submit";
   onClick?: MouseEventHandler<HTMLButtonElement>;
-  large?: boolean;
+  Large?: boolean;
 };
 
 export default function Button({
   type = "button",
   onClick,
   children,
-  large,
+  Large,
 }: ButtonProps) {
-  const [hover, setHover] = useState(false);
-
-  const buttonStyle = {
-    width: large ? "100%" : "20rem",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "10px",
-    padding: "18px 24px",
-    background: hover ? theme.colors.white : theme.colors.primary_burger,
-    color: hover ? theme.colors.primary_burger : theme.colors.white,
-    fontSize: theme.fonts.size.P0,
-    fontWeight: theme.fonts.weights.bold,
-    borderRadius: theme.borderRadius.round,
-    cursor: "pointer",
-  };
-
-  const onHandleHover = () => {
-    setHover((hover) => !hover);
-  };
-
   return (
-    <button
+    <ButtonStyled
       type={type}
       onClick={onClick}
-      style={buttonStyle}
-      onMouseEnter={onHandleHover}
-      onMouseLeave={onHandleHover}
+      style={{ width: Large ? "100%" : "" }}
     >
       {children}
-    </button>
+    </ButtonStyled>
   );
 }
+
+const ButtonStyled = styled.button`
+  background: ${theme.colors.primary_burger};
+  color: ${theme.colors.white};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.8rem 2.4rem;
+  font-size: ${theme.fonts.size.P0};
+  font-weight: ${theme.fonts.weight.bold};
+  border-radius: ${theme.borderRadius.round};
+  cursor: pointer;
+
+  &:hover {
+    background: ${theme.colors.white};
+    color: ${theme.colors.primary_burger};
+  }
+`;
