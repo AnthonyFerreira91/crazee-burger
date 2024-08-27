@@ -9,22 +9,12 @@ html {
 }
 
 body {
+  width: 100vw;
   height: 100vh;
-  font-size: 1.6rem;
 }
 
-.App {
-  margin: 2rem 2rem;
-}
-
-button {
-  padding: 0 10px;
-}
-
-h2 {
-  margin: 20px 0;
-}
-
-p {
-  margin: 20px 0;
+button,
+input {
+  font-family: "Arial";
+  border: none;
 }
