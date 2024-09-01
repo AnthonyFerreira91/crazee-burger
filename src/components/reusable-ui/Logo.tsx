@@ -19,12 +19,13 @@ export default function Logo({ variant }: LogoProps) {
 const LogoStyled = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
   color: ${theme.colors.primary};
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 
   &:not(:not(.LoginPage)) {
+    gap: 2rem;
+
     h1 {
       font-size: 11rem;
     }
@@ -33,6 +34,21 @@ const LogoStyled = styled.div`
       object-fit: contain;
       width: 20rem;
       height: 15rem;
+    }
+  }
+
+  &:not(:not(.Layout)) {
+    gap: 0.4rem;
+
+    h1 {
+      font-size: ${theme.fonts.size.P4};
+      line-height: ${theme.fonts.size.P4};
+    }
+
+    img {
+      object-fit: contain;
+      width: 8rem;
+      height: 6rem;
     }
   }
 `;

@@ -18,3 +18,11 @@ input {
   font-family: "Arial";
   border: none;
 }
+
+h1 {
+  font-family: "Amatic SC", cursive, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}

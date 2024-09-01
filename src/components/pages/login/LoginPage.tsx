@@ -21,5 +21,4 @@ const LoginPageStyled = styled.div`
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  font-family: "Amatic SC", cursive, sans-serif;
 `;
