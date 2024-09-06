@@ -3,16 +3,21 @@ import { theme } from "../../themes/standardTheme";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
-import { FaCircle } from "react-icons/fa";
 import { BsPersonCircle } from "react-icons/bs";
+import { FaCircle } from "react-icons/fa";
 
 export default function Navbar() {
   const { firstname } = useParams();
   return (
     <NavbarStyled>
-      <Logo variant="Layout" />
+      <div 
+        onClick={() => window.location.reload()}
+        style={{cursor: "pointer"}}
+      >
+        <Logo variant="Layout" />
+      </div>
       <div>
-        <Button>
+        <Button variant="admin">
           <FaCircle size="3rem" fill={theme.colors.primary} />
           Activer le mode Admin
         </Button>
@@ -23,7 +28,7 @@ export default function Navbar() {
             </p>
             <br />
             <Link to="/">
-              <button type="button">Déconnexion</button>
+              <Button variant="transparent">Se déconnecter</Button>
             </Link>
           </div>
           <BsPersonCircle
@@ -48,15 +53,6 @@ const NavbarStyled = styled.nav`
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    > button {
-      background: ${theme.colors.background_dark};
-      color: ${theme.colors.primary};
-      border-radius: 3rem;
-      padding: 0.5rem 1rem 0.5rem 0.5rem;
-      font-size: ${theme.fonts.size.XXS};
-      gap: 0.5rem;
-    }
 
     > div {
       display: flex;

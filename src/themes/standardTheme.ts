@@ -59,6 +59,7 @@ const borderRadius = {
   subtle: 1,
   round: "0.5rem",
   extraRound: "1.5rem",
+  largeExtraRound: "3rem",
   circle: "50%",
 } as const;
 

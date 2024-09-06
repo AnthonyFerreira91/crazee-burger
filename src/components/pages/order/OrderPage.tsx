@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Layout from "../../reusable-ui/Layout";
+import Layout from "../../ui/Layout";
 import { theme } from "../../../themes/standardTheme";
 
 export default function OrderPage() {
