@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Layout from "../../ui/Layout";
-import { theme } from "../../../themes/standardTheme";
+import Layout from "../../components/ui/Layout";
+import { theme } from "../../themes/standardTheme";
 
 export default function OrderPage() {
   return (

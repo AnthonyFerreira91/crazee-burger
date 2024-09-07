@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../../ui/Logo";
+import Logo from "../../components/reusable/Logo";
 import LoginForm from "./LoginForm";
 
 export default function LoginPage() {

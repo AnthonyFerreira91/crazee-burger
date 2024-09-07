@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../../ui/Button";
+import Button from "../../components/reusable/Button";
 
 export default function ErrorPage() {
   return (
