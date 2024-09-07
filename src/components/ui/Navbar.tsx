@@ -16,13 +16,13 @@ export default function Navbar() {
       >
         <Logo variant="Layout" />
       </div>
-      <div>
+      <div className="navbar_menu">
         <Button variant="admin">
           <FaCircle size="3rem" fill={theme.colors.primary} />
           Activer le mode Admin
         </Button>
-        <div>
-          <div>
+        <div className="navbar_menu_profile">
+          <div className="navbar_menu_profile_name-logout">
             <p>
               Hey, <span>{firstname}</span>
             </p>
@@ -45,29 +45,39 @@ const NavbarStyled = styled.nav`
   background: ${theme.colors.white};
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 7rem 0 2rem;
   border-radius: 15px 15px 0 0;
   height: 9.919rem;
 
-  > div {
+  .navbar_menu {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 6rem;
 
-    > div {
+    &_profile {
       display: flex;
+      align-items: center;
+      gap: 1rem;
 
-      > div {
-        padding: 0px, 0px, 0px, 50px;
+      &_name-logout {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.4rem;
 
         > p {
           font-size: 1.6rem;
-
+          font-weight: 400;
+          color: ${theme.colors.greyBlue};
+          
           > span {
+            font-weight: ${theme.fonts.weight.bold};
             color: ${theme.colors.primary};
+            text-transform: capitalize;
           }
         }
-      }
+      }   
     }
   }
 `;

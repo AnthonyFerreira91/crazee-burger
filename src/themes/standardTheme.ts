@@ -46,6 +46,7 @@ const fonts = {
 };
 
 const spacing = {
+  xxxs: "0.05rem",
   xxs: "0.4rem",
   xs: "0.8rem",
   sm: "1.2rem",

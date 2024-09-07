@@ -13,12 +13,11 @@ export default function Layout(props: PropsWithChildren) {
 }
 
 const LayoutStyled = styled.div`
-  /* background: ${theme.colors.white}; */
-  min-width: 1400px;
+  min-width: 140rem;
   display: flex;
   flex-direction: column;
   border-radius: ${theme.borderRadius.extraRound};
-  height: 95vh;
+  height: 95%;
   font-family: "Open Sans", sans-serif;
   
   .childrenContainer {

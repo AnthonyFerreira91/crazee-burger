@@ -34,15 +34,17 @@ const ButtonStyled = styled.button`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-family: Open Sans;
   font-weight: ${theme.fonts.weight.bold};
   cursor: pointer;
   
   &.primary {
     background: ${theme.colors.primary_burger};
-    color: ${theme.colors.white};
-    font-size: ${theme.fonts.size.P0};
     padding: 1.8rem 2.4rem;
     border-radius: ${theme.borderRadius.round};
+    font-family: "Arial";
+    font-size: ${theme.fonts.size.P0};
+    color: ${theme.colors.white};
 
     &:hover {
       background: ${theme.colors.white};
@@ -54,6 +56,7 @@ const ButtonStyled = styled.button`
     background: transparent;
     color: ${theme.colors.greyBlue};
     font-size: ${theme.fonts.size.XXS};
+    font-weight: ${theme.fonts.weight.regular};
 
     &:hover {
       border-bottom: 1px solid ${theme.colors.greyBlue};
@@ -62,10 +65,14 @@ const ButtonStyled = styled.button`
 
   &.admin {
     background: ${theme.colors.background_dark};
-    color: ${theme.colors.primary};
-    border-radius: ${theme.borderRadius.largeExtraRound};
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
-    font-size: ${theme.fonts.size.XXS};
+    width: 20rem;
+    justify-content: flex-start;
     gap: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-radius: ${theme.borderRadius.largeExtraRound};
+    font-size: ${theme.fonts.size.XXS};
+    color: ${theme.colors.primary};
+    letter-spacing: ${theme.spacing.xxxs};
+    text-transform: uppercase;
   }
 `;
