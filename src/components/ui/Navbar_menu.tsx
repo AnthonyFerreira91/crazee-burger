@@ -38,7 +38,7 @@ const Navbar_menuStyled = styled.div`
     align-items: center;
     gap: 6rem;
 
-    &_profile {
+    .navbar_menu_profile {
       display: flex;
       align-items: center;
       gap: 1rem;
