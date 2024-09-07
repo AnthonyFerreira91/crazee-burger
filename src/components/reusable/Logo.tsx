@@ -1,14 +1,16 @@
+import { MouseEventHandler } from "react";
 import LogoImage from "../../assets/images/logo.png";
 import styled from "styled-components";
 import { theme } from "../../themes/standardTheme";
 
 type LogoProps = {
   variant: "LoginPage" | "Layout";
+  onClick?: MouseEventHandler<HTMLDivElement>
 };
 
-export default function Logo({ variant }: LogoProps) {
+export default function Logo({ variant, onClick }: LogoProps) {
   return (
-    <LogoStyled className={variant}>
+    <LogoStyled className={variant} onClick={onClick}>
       <h1>Crazee</h1>
       <img src={LogoImage} alt="logo" />
       <h1>Burger</h1>
@@ -39,6 +41,7 @@ const LogoStyled = styled.div`
 
   &:not(:not(.Layout)) {
     gap: 0.4rem;
+    cursor: pointer;
 
     h1 {
       font-size: ${theme.fonts.size.P4};

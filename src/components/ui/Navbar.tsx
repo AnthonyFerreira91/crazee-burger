@@ -8,12 +8,7 @@ export default function Navbar() {
   
   return (
     <NavbarStyled>
-      <div 
-        onClick={() => window.location.reload()}
-        style={{cursor: "pointer"}}
-      >
-        <Logo variant="Layout" />
-      </div>
+      <Logo variant="Layout" onClick={() => window.location.reload()}/>
       <Navbar_menu />
     </NavbarStyled>
   );
