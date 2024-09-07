@@ -1,8 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { theme } from "../../themes/standardTheme";
 import styled from "styled-components";
-import Logo from "./Logo";
-import Button from "./Button";
+import Logo from "../reusable/Logo";
+import Button from "../reusable/Button";
 import { BsPersonCircle } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
 
@@ -48,7 +48,8 @@ const NavbarStyled = styled.nav`
   align-items: center;
   padding: 0 7rem 0 2rem;
   border-radius: 15px 15px 0 0;
-  height: 9.919rem;
+  /* height: 9.919rem; */
+  height: 13.2vh;
 
   .navbar_menu {
     display: flex;

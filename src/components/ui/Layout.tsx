@@ -13,7 +13,7 @@ export default function Layout(props: PropsWithChildren) {
 }
 
 const LayoutStyled = styled.div`
-  min-width: 140rem;
+  width: 140rem;
   display: flex;
   flex-direction: column;
   border-radius: ${theme.borderRadius.extraRound};
