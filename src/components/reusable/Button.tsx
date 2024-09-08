@@ -21,7 +21,7 @@ export default function Button({
     <ButtonStyled
       type={type}
       onClick={onClick}
-      style={{width: Large ? "100%" : ""}}
+      style={{ width: Large ? "100%" : "" }}
       className={variant}
     >
       {children}
@@ -34,10 +34,9 @@ const ButtonStyled = styled.button`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-family: Open Sans;
   font-weight: ${theme.fonts.weight.bold};
   cursor: pointer;
-  
+
   &.primary {
     background: ${theme.colors.primary_burger};
     padding: 1.8rem 2.4rem;
@@ -59,7 +58,8 @@ const ButtonStyled = styled.button`
     font-weight: ${theme.fonts.weight.regular};
 
     &:hover {
-      border-bottom: 1px solid ${theme.colors.greyBlue};
+      text-decoration: underline;
+      text-underline-offset: 0.4rem;
     }
   }
 

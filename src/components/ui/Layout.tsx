@@ -7,7 +7,7 @@ export default function Layout(props: PropsWithChildren) {
   return (
     <LayoutStyled>
       <Navbar />
-      <div className="childrenContainer">{props.children}</div>
+      <div className="mainContainer">{props.children}</div>
     </LayoutStyled>
   );
 }
@@ -18,9 +18,8 @@ const LayoutStyled = styled.div`
   flex-direction: column;
   border-radius: ${theme.borderRadius.extraRound};
   height: 95%;
-  font-family: "Open Sans", sans-serif;
-  
-  .childrenContainer {
+
+  .mainContainer {
     background: #f5f5f7;
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
     border-radius: 0px 0px 15px 15px;
