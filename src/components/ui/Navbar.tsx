@@ -2,11 +2,12 @@ import { theme } from "../../themes/standardTheme";
 import styled from "styled-components";
 import Logo from "../reusable/Logo";
 import Menu from "./Menu";
+import { refreshPage } from "../../utils/window";
 
 export default function Navbar() {
   return (
     <NavbarStyled>
-      <Logo variant="Layout" onClick={() => window.location.reload()} />
+      <Logo variant="Layout" onClick={refreshPage} />
       <Menu />
     </NavbarStyled>
   );
