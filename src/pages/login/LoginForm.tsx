@@ -1,9 +1,9 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { theme } from "../../../themes/standardTheme";
-import TextInput from "../../reusable-ui/TextInput";
-import Button from "../../reusable-ui/Button";
+import { theme } from "../../themes/standardTheme";
+import TextInput from "../../components/reusable/TextInput";
+import Button from "../../components/reusable/Button";
 import { BsPersonCircle } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Separate from "./LoginSeparate";

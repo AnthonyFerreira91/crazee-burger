@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../../reusable-ui/Logo";
+import Logo from "../../components/reusable/Logo";
 import LoginForm from "./LoginForm";
 
 export default function LoginPage() {
@@ -21,5 +21,4 @@ const LoginPageStyled = styled.div`
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  font-family: "Amatic SC", cursive, sans-serif;
 `;

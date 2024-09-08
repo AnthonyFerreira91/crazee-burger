@@ -46,6 +46,7 @@ const fonts = {
 };
 
 const spacing = {
+  xxxs: "0.05rem",
   xxs: "0.4rem",
   xs: "0.8rem",
   sm: "1.2rem",
@@ -59,6 +60,7 @@ const borderRadius = {
   subtle: 1,
   round: "0.5rem",
   extraRound: "1.5rem",
+  largeExtraRound: "3rem",
   circle: "50%",
 } as const;
 

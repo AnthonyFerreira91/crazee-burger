@@ -1,4 +1,4 @@
-import { theme } from "../../../themes/standardTheme";
+import { theme } from "../../themes/standardTheme";
 
 export default function Separate() {
   const hrStyle = {
